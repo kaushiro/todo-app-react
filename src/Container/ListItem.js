@@ -8,7 +8,7 @@ const mapStateToProps = (state, { id }) => {
     const task = tasks.find(t => t.get("id") === +id);
 
     return {
-        task: task,
+      task: task
     };
 };
 const mapDispatchToProps = dispatch => {

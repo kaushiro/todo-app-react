@@ -29,21 +29,21 @@ class ListItem extends Component {
     }
     onSubmit(e) {
     	const { task } = this.props;
-    	this.setState({value:e.targetValue})
+    	const data = this.setState({value:e.targetValue})
 		task.set("task", this.state.value);
-		const data = this.state.fields.reduce((data, { value }) => {
-            data[value] = value;
-            return data;
-        }, {});
+		// const data = this.state.fields.reduce((data, { value }) => {
+  //           data[value] = value;
+  //           return data;
+  //       }, {});
+
+  		console.log(this.props);
 		this.props.onSubmit(data);
     }
 
 	render() {
-		// const { onSubmit } = this.props;
 		const { task } = this.props;
-		const fields = [
-		    { name: "task", value: task.get('task') },
-		];
+		const fields = 
+		    { name: "task", value: this.state.value };
 		
 		return (
 			<div className="form-group">

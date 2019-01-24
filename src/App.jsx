@@ -14,12 +14,7 @@ const App = () => (
 
     <div>
       <Header />
-      <Tasks />
-      
-         
-           
-        
-     
+      <Tasks /> 
     </div>
 );
 
